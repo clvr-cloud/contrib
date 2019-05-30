@@ -92,7 +92,7 @@ ScaleApp.prototype.refresh = function() {
     }
     this.refreshInProgress = true;
     var promises = [];
-    promises.push(this.http.get("/api/v1/proxy/namespaces/default/services/aggregator/")
+    promises.push(this.http.get("/api/v1/namespaces/default/services/aggregator/proxy/")
     .success(function(data) {
 	    this.fullData = data;
 	}.bind(this))
